@@ -35,7 +35,7 @@ def home():
     return {"message": "FastAPI Is Working"}
 
 
-# Q1 --- Endpoint 1 ---
+# Q1 --- Add Product ---
 @app.post("/products")
 def add_product(new_product: NewProduct):
 
@@ -64,43 +64,7 @@ def add_product(new_product: NewProduct):
     return {"message": "Product added", "product": product}
 
 
-# Q2 --- Endpoint 2 ---
-@app.put("/products/{product_id}")
-def update_product(
-    product_id: int,
-    price: int = Query(None, description="Update product price"),
-    in_stock: bool = Query(None, description="Update stock status"),
-):
-
-    product = find_product(product_id)
-
-    if not product:
-        raise HTTPException(status_code=404, detail="Product not found")
-
-    if price is not None:
-        product["price"] = price
-
-    if in_stock is not None:
-        product["in_stock"] = in_stock
-
-    return {"message": "Product updated", "product": product}
-
-
-# Q3 --- Endpoint 3 ---
-@app.delete("/products/{product_id}")
-def delete_product(product_id: int):
-
-    product = find_product(product_id)
-
-    if not product:
-        raise HTTPException(status_code=404, detail="Product not found")
-
-    products.remove(product)
-
-    return {"message": f"Product '{product['name']}' deleted"}
-
-
-# Q5 --- Endpoint 4 ---
+# Q5 --- Products Audit ---
 @app.get("/products/audit")
 def product_audit():
 
@@ -123,7 +87,7 @@ def product_audit():
     }
 
 
-# Q6 --- Endpoint 5 ---
+# Q6 --- Category Discount ---
 @app.put("/products/discount")
 def bulk_discount(
     category: str = Query(..., description="Category to discount"),
@@ -150,3 +114,39 @@ def bulk_discount(
         "updated_count": len(updated),
         "updated_products": updated
     }
+
+
+# Q2 --- Update Product ---
+@app.put("/products/{product_id}")
+def update_product(
+    product_id: int,
+    price: int = Query(None, description="Update product price"),
+    in_stock: bool = Query(None, description="Update stock status"),
+):
+
+    product = find_product(product_id)
+
+    if not product:
+        raise HTTPException(status_code=404, detail="Product not found")
+
+    if price is not None:
+        product["price"] = price
+
+    if in_stock is not None:
+        product["in_stock"] = in_stock
+
+    return {"message": "Product updated", "product": product}
+
+
+# Q3 --- Delete Product ---
+@app.delete("/products/{product_id}")
+def delete_product(product_id: int):
+
+    product = find_product(product_id)
+
+    if not product:
+        raise HTTPException(status_code=404, detail="Product not found")
+
+    products.remove(product)
+
+    return {"message": f"Product '{product['name']}' deleted"}
