@@ -1,6 +1,6 @@
-# FastAPI Assignment 4
+# FastAPI Task 4
 
-This assignment focuses on building a **shopping cart system** using FastAPI.  
+This task focuses on building a **shopping cart system** using FastAPI.  
 The API simulates a simple e-commerce workflow where users can add items to a cart, review them, remove items, and complete checkout.
 
 All tasks are implemented in a single `main.py` file.

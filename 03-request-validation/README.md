@@ -1,6 +1,6 @@
-# FastAPI Assignment 3
+# FastAPI Task 3
 
-This assignment focuses on implementing **CRUD operations** using FastAPI.  
+This task focuses on implementing **CRUD operations** using FastAPI.  
 The tasks involve adding, updating, deleting, and summarizing product data using API endpoints.
 
 All tasks are implemented in a single `main.py` file.

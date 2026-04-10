@@ -1,6 +1,6 @@
-# FastAPI Assignment 1
+# FastAPI Task 1
 
-This assignment focuses on building REST API endpoints using **FastAPI**.  
+This task focuses on building REST API endpoints using **FastAPI**.  
 All tasks are implemented in a single `main.py` file.
 
 ---

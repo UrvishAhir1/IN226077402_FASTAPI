@@ -1,6 +1,6 @@
-# FastAPI Assignment 5
+# FastAPI Task 5
 
-This assignment focuses on implementing **Search, Sort, and Pagination** features in a FastAPI application.  
+This task focuses on implementing **Search, Sort, and Pagination** features in a FastAPI application.  
 These are core functionalities used in real-world APIs.
 
 All tasks are implemented in a single `main.py` file.

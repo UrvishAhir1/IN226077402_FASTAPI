@@ -1,7 +1,6 @@
-# FastAPI Assignments
+# FastAPI Practice Lab
 
-This repository contains backend assignments built using **FastAPI** as part of an internship program.  
-Each assignment focuses on implementing REST API concepts and backend logic using Python.
+This repository contains practice assignments built using FastAPI to strengthen backend development and REST API design skills.
 
 ---
 
@@ -16,14 +15,12 @@ Each assignment focuses on implementing REST API concepts and backend logic usin
 
 ## Topics Covered
 
-The assignments in this repository may include concepts such as:
-
-- REST API development
-- FastAPI routing
-- GET, POST, and PATCH requests
-- Path parameters
-- Query parameters
-- Request validation using Pydantic
+- REST API Design
+- FastAPI Routing
+- Request/Response Validation
+- Query & Path Parameters
+- CRUD Operations
+- Interactive API Documentation
 
 ---
 
@@ -44,8 +41,8 @@ Main dependencies:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/UrvishAhir1/IN226077402_FASTAPI.git
-cd IN226077402_FASTAPI
+git clone https://github.com/UrvishAhir1/fastapi-practice-lab.git
+cd fastapi-practice-lab
 ```
 
 ---
@@ -82,7 +79,7 @@ pip install -r requirements.txt
 
 ## Running the API
 
-Navigate to any assignment folder and run:
+Navigate to any folder and run:
 
 ```bash
 uvicorn main:app --reload

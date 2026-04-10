@@ -1,6 +1,6 @@
-# FastAPI Assignment 2
+# FastAPI Task 2
 
-This assignment continues building REST API endpoints using **FastAPI**.  
+This task continues building REST API endpoints using **FastAPI**.  
 It focuses on query parameters, path parameters, Pydantic validation, POST requests, and business logic.
 
 All tasks are implemented in a single `main.py` file.
